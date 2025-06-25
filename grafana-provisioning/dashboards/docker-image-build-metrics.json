@@ -1,0 +1,36 @@
+{
+  "id": null,
+  "title": "Docker Image Build Metrics",
+  "timezone": "browser",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Docker Image Build Time (seconds)",
+      "targets": [
+        {
+          "expr": "docker_image_build_time_seconds",
+          "legendFormat": "{{image}}",
+          "refId": "A"
+        }
+      ],
+      "datasource": "Prometheus",
+      "id": 1
+    },
+    {
+      "type": "graph",
+      "title": "Docker Image Size (MB)",
+      "targets": [
+        {
+          "expr": "docker_image_size_megabytes",
+          "legendFormat": "{{image}}",
+          "refId": "B"
+        }
+      ],
+      "datasource": "Prometheus",
+      "id": 2
+    }
+  ],
+  "schemaVersion": 30,
+  "version": 1,
+  "refresh": "10s"
+}
